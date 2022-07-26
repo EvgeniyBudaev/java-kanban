@@ -3,14 +3,14 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Epic extends Task {
-    private final Map<Integer, Subtask> subTasksEpic = new HashMap<>() ;
+    private final Map<Integer, Subtask> subtasksEpic = new HashMap<>() ;
 
-    public Epic(String description, String name) {
-        super(description, name);
+    public Epic(String description, String name, Status status) {
+        super(description, name, status);
     }
 
-    public Map<Integer, Subtask> getSubTasksEpic() {
-        return subTasksEpic;
+    public Map<Integer, Subtask> getSubtasksEpic() {
+        return subtasksEpic;
     }
 
     @Override
@@ -19,18 +19,18 @@ public class Epic extends Task {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Epic epic = (Epic) o;
-        return Objects.equals(subTasksEpic, epic.subTasksEpic);
+        return Objects.equals(subtasksEpic, epic.subtasksEpic);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), subTasksEpic);
+        return Objects.hash(super.hashCode(), subtasksEpic);
     }
 
     @Override
     public String toString() {
         return "Epic{" +
-                "subTasksEpic=" + subTasksEpic +
+                "subtasksEpic=" + subtasksEpic +
                 ", description='" + description + '\'' +
                 ", id=" + id +
                 ", name='" + name + '\'' +

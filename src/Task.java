@@ -6,10 +6,10 @@ public class Task {
     protected String name;
     protected Status status;
 
-    public Task(String description, String name) {
+    public Task(String description, String name, Status status) {
         this.description = description;
         this.name = name;
-        this.status = Status.NEW;
+        this.status = status;
     }
 
     public String getDescription() {
