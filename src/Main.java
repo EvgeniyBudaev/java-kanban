@@ -1,5 +1,10 @@
+import manager.Manager;
+import status.Status;
+import tasks.Epic;
+import tasks.Subtask;
+import tasks.Task;
+
 import java.util.List;
-import java.util.Map;
 
 public class Main {
 
@@ -37,7 +42,8 @@ public class Main {
         System.out.println("--- Update epic ---");
         epic.setStatus(Status.IN_PROGRESS);
         manager.updateEpic(epic);
-        System.out.println(epic);
+        Epic epic3 = manager.getEpicById(3);
+        System.out.println(epic3);
         System.out.println();
 
         System.out.println("*** Subtask ***");
@@ -106,7 +112,7 @@ public class Main {
 //        System.out.println("--- Get all subtasks by epic id ---");
 //        List<Subtask> subtasksByEpicId = manager.getAllSubtasksByEpicId(3);
 //        System.out.println(subtasksByEpicId);
-
+//
 //        System.out.println("--- Update ---");
 //        Task task = manager.getTaskById(1);
 //        task.setStatus(Status.IN_PROGRESS);

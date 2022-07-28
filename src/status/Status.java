@@ -1,3 +1,5 @@
+package status;
+
 public enum Status {
     NEW("new"), IN_PROGRESS("inProgress"), DONE("done");
     private String translation;
